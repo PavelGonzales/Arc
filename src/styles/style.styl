@@ -9,6 +9,11 @@ body
   margin 0
   overflow hidden
   height 100vh
+  @media all and (orientation: landscape) and (max-width: 600px)
+    position relative
+    min-height 520px
+    height auto
+    overflow auto
 a
   color inherit 
   text-decoration none
@@ -21,10 +26,13 @@ a
     height 100%
     +width-lessthan(600)
       width-between-property 'padding-left', 320, 20, 600, 80, true, true 
+      width 100%
 
 .logo
   width-between-property 'padding-top', 320, 20, 600, 120, true, true
   width-between-property 'width', 320, 256, 600, 480, true, true
+  @media all and (orientation: landscape) and (max-width: 600px)
+    padding-top 40px
   svg
     width 100%
 
@@ -34,6 +42,8 @@ a
   +width-lessthan(600)
     width-between-property 'margin-top', 320, 20, 600, 221, true, true 
     font-size 20px
+  @media all and (orientation: landscape) and (max-width: 600px)
+    margin-top 20px !important
   a 
     +width-lessthan(768)
       display block
@@ -41,9 +51,10 @@ a
 
 .bottom
   position absolute
-  bottom 122px
   width 100%
   width-between-property 'bottom', 320, 42, 600, 122, true, true
+  @media all and (orientation: landscape) and (max-width: 600px)
+    bottom 42px !important
   &__content
     display inline-block
     float left
