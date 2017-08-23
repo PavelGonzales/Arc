@@ -15,10 +15,13 @@ html
     .layout
       .logo
         include ./img/logo.svg
-      .contacts + 7 495 088 36 13 — hireus@arc-fitout.com
+      .contacts 
+        a(href="tel:+74950883613") + 7 495 088 36 13 
+        span.dash
+        a(href="mailto:hireus@arc-fitout.com") hireus@arc-fitout.com
       .bottom
+        .bottom__img
+          include ./img/group.svg
         .bottom__content
           .bottom__title Сайт на реконструкции
           .bottom__text Мы скоро запустимся
-        .bottom__img
-          include ./img/group.svg
